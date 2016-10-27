@@ -1,0 +1,16 @@
+@charset "UTF-8";
+html, body{
+  margin: 0; padding: 0;
+  height: 100%;
+  font-size: 100%;
+}
+
+.container{
+  width: 100%;
+}
+
+.search{
+  opacity: .7;
+  margin: 0 auto; padding: 0;
+  width: 500px;
+}
