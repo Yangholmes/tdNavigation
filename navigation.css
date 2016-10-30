@@ -3,6 +3,7 @@ html, body{
   margin: 0; padding: 0;
   height: 100%;
   font-size: 100%;
+  font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
 }
 
 .container{
@@ -10,7 +11,64 @@ html, body{
 }
 
 .search{
-  opacity: .7;
+  opacity: .7; transition: opacity .5s;
+  display:-moz-box;
+  display:-webkit-box;
+  display:box;
   margin: 0 auto; padding: 0;
-  width: 500px;
+  width: 431px;
+  height: 2em;
+  text-align: center;
+}
+.search:hover{
+  opacity: 1; transition: opacity .5s;
+}
+
+.search .ipt{
+  display: inline-block;
+  background-color: white;
+  width: 325px;
+  border: 1px solid rgb(90, 90, 90);
+  border-radius: 2px;
+}
+.search .ipt a{
+  float: left;
+  width: 2em; height: 2em;
+  padding: 0; margin: 0;
+  background: url('search-logo.png');
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: 5px 5px;
+  cursor: pointer;
+}
+.search .ipt input{
+  font-size: 1em;
+  border: none; outline: none;
+  line-height: 2em;
+  -webkit-appearance: none;
+  padding: 0;
+  width: 290px;
+}
+
+#search-kwd{
+  display: inline-block;
+}
+
+.button{
+  display: block;
+  margin: 0 0 0 3px;
+}
+
+.search .btn{
+  width: 100px; height: 2em;
+  line-height: 2em;
+  background-color: rgb(98, 172, 255); transition: background-color .5s;
+  border: 1px solid rgb(75, 157, 229);
+  border-radius: 2px;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+.search .btn:hover{
+  background-color: rgb(80, 150, 220); transition: background-color .5s;
 }
