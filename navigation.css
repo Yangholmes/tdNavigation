@@ -1,15 +1,21 @@
 @charset "UTF-8";
 html, body{
   margin: 0; padding: 0;
-  height: 100%;
   font-size: 100%;
   font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
 }
 
+/**
+ * common container
+ */
 .container{
   width: 100%;
+  margin: 10em 0; /* temp */
 }
 
+/**
+ * search bar
+ */
 .search{
   opacity: .7; transition: opacity .5s;
   display:-moz-box;
@@ -55,7 +61,6 @@ html, body{
 }
 
 .button{
-  display: block;
   margin: 0 0 0 3px;
 }
 
@@ -71,4 +76,64 @@ html, body{
 }
 .search .btn:hover{
   background-color: rgb(80, 150, 220); transition: background-color .5s;
+}
+
+/**
+ * site gallery
+ */
+#site-gallery{
+  width: calc( 280px * 4 + 10px * 2 * 4 + 1px * 2 * 4 );
+  height: calc( 160px * 2 + 10px * 2 * 2 + 1px * 2 * 2 );
+  margin: 0 auto; /* align center */
+  display:-moz-box; display:-webkit-box; display:box;
+}
+a.site-link{
+  display: inline-block;
+  margin: 8px;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 2px;
+  box-shadow: none; transition: box-shadow .3s;
+}
+a.site-link:hover{
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2); transition: box-shadow .3s;
+}
+
+.bar{
+  visibility: hidden;
+  position: absolute;
+  display:-moz-box; display:-webkit-box; display:box;
+  width: 280px; height: 25px;
+  background-color: rgba(50, 50, 50, .7);
+  text-align: center;
+  color: white;
+}
+a.site-link:hover .bar{
+  visibility: visible;
+  z-index: 999;
+}
+.bar .site-favicon{
+  width: 25px; height: 25px;
+  line-height: 25px;
+}
+.bar .site-title {
+  margin: 0 1em;
+  line-height: 25px;
+}
+
+.site-thumb{
+  width: 280px; height: 160px;
+  background-color: white;
+}
+.site-thumb img{
+  position: absolute;
+}
+
+/**
+ *
+ */
+#background{
+  background: url('background/test.jpg') repeat-x;
+  width: 100%; height: 100%;
+  position: absolute; top: 0; left: 0;
+  z-index: -999;
 }
