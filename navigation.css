@@ -93,9 +93,11 @@ a.site-link{
   border: 1px solid rgb(150, 150, 150);
   border-radius: 2px;
   box-shadow: none; transition: box-shadow .3s;
+  opacity: .9; transition: opacity .5s;
 }
 a.site-link:hover{
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2); transition: box-shadow .3s;
+  box-shadow: 0 1px 5px 2px rgba(0,0,0,.3), 0 3px 10px 5px rgba(0,0,0,.1); transition: box-shadow .3s;
+  opacity: 1; transition: opacity .5s;
 }
 
 .bar{
@@ -115,9 +117,18 @@ a.site-link:hover .bar{
   width: 25px; height: 25px;
   line-height: 25px;
 }
+.bar .site-favicon img{
+  width: 16px; height: 16px;
+}
 .bar .site-title {
-  margin: 0 1em;
+  width: calc(100% - 25px - 1em);
+  text-align: left;
+  margin-left: 1em;
   line-height: 25px;
+  overflow: hidden;
+  -moz-mask-image: linear-gradient(to right, #000, 5em, rgba(0,0,0,1), rgba(0,0,0,0));
+  -webkit-mask-image: linear-gradient(to right, #000, 5em, rgba(0,0,0,1), rgba(0,0,0,0));
+  mask-image: linear-gradient(to right, #000, 5em, rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 .site-thumb{
@@ -125,6 +136,7 @@ a.site-link:hover .bar{
   background-color: white;
 }
 .site-thumb img{
+  width: 280px; height: 160px;
   position: absolute;
 }
 
