@@ -17,7 +17,7 @@ html, body{
  * search bar
  */
 .search{
-  opacity: .7; transition: opacity .5s;
+  opacity: .85; transition: opacity .5s;
   display:-moz-box;
   display:-webkit-box;
   display:box;
@@ -141,7 +141,7 @@ a.site-link:hover .bar{
 }
 
 /**
- *
+ * background
  */
 #background{
   background: url('background/test.jpg') no-repeat;
@@ -149,4 +149,16 @@ a.site-link:hover .bar{
   min-width: 1208px ; min-height: calc( 32px + 20em + 364px + 10em );
   position: absolute; top: 0; left: 0;
   z-index: -999;
+}
+#background #bg-copyright{
+  background-color: rgba(20, 20, 20, .5);
+  color: rgba(220, 220, 220, .8);
+  font-size: 1em;
+  width: 100%;
+  position: fixed; bottom: 0;
+}
+#background #bg-copyright::before{
+  content: "I Love You!";
+  color: rgba(255, 255, 255, 0);
+  font-size: calc( 1em / 10 );
 }
